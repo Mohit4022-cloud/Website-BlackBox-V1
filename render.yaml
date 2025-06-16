@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: harper-ai-website
+    env: docker
+    buildCommand: docker build -t harper-ai-website .
+    startCommand: docker run -p $PORT:80 harper-ai-website
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+    healthCheckPath: /
+    autoDeploy: true
+    branch: main
