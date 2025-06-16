@@ -1,6 +1,6 @@
 services:
   - type: static
-    name: mohit-ai-website
+    name: harper-ai-website
     buildCommand: docker build --build-arg CACHE_BUST=$(date +%s) -t mohit-ai-website .
     publishDir: user-workspace
     staticPublishPath: /
