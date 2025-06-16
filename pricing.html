@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harper AI Pricing - AI-Powered Sales Development Platform">
+    <title>Pricing - Harper AI</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/_brand/favicon-32x32.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#DDA0DD',
+                        accent: '#BA55D3',
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #DDA0DD 0%, #BA55D3 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-900">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md border-b border-neutral-100 z-50 transition-all duration-300 supports-backdrop-blur:bg-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-black tracking-tight">Harper AI</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product.html" class="text-neutral-600 hover:text-black transition-colors duration-200">Product</a>
+                    <a href="pricing.html" class="text-black font-semibold transition-colors duration-200">Pricing</a>
+                    <div class="relative group">
+                        <button class="text-neutral-600 hover:text-black transition-colors duration-200 flex items-center">
+                            Solutions
+                            <svg class="ml-2 h-5 w-5 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-1">
+                                <a href="solutions.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">By Industry</a>
+                                <a href="for-sdrs.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">For SDRs</a>
+                                <a href="for-managers.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">For Managers</a>
+                                <a href="enterprise.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">Enterprise</a>
+                                <a href="small-business.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">Small Business</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="resources.html" class="text-neutral-600 hover:text-black transition-colors duration-200">Resources</a>
+                    <a href="security.html" class="text-neutral-600 hover:text-black transition-colors duration-200">Security</a>
+                    <a href="signup.html" class="inline-flex items-center px-6 py-2.5 border-2 border-black text-black font-medium rounded-lg hover:bg-black hover:text-white transition-all duration-200">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-6xl font-bold text-black mb-6">Get Your AI SDR Starting at $299/Month</h1>
+            <p class="text-xl text-neutral-600 mb-8">Compare the cost of Harper AI to hiring additional SDRs. One AI SDR does the work of 3+ human SDRs for outreach.</p>
+            <div class="flex justify-center gap-4 text-sm text-neutral-600">
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">14-Day</span> Free Trial
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">No</span> Credit Card Required
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold">Cancel</span> Anytime
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Comparison -->
+    <section class="py-12 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-2xl border border-neutral-100 hover:border-neutral-200 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-black mb-6">Traditional SDR Cost</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-600">Annual Salary</span>
+                            <span class="font-semibold">$80,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-600">Benefits & Overhead</span>
+                            <span class="font-semibold">$20,000+</span>
+                        </div>
+                        <div class="border-t border-neutral-100 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-black font-bold">Total Annual Cost</span>
+                                <span class="text-black font-bold">$100,000+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-neutral-100 hover:border-neutral-200 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-black mb-6">Harper AI Cost</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-600">Annual Cost (Growth Plan)</span>
+                            <span class="font-semibold">$9,588</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-neutral-600">Additional Costs</span>
+                            <span class="font-semibold">$0</span>
+                        </div>
+                        <div class="border-t border-neutral-100 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-black font-bold">Total Annual Cost</span>
+                                <span class="text-accent font-bold">84% Cost Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-white p-8 rounded-2xl border border-neutral-100">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Starter</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold">$299</span>
+                            <span class="text-neutral-600">/month</span>
+                        </div>
+                        <p class="text-neutral-600">Perfect for small teams testing AI SDR</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            500 new prospects contacted monthly
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Email + LinkedIn outreach
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Basic lead qualification
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            5-10 hot leads delivered monthly
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Email support
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Setup in under 1 hour
+                        </li>
+                    </ul>
+                    <a href="signup.html" class="block w-full text-center px-6 py-3 border border-black text-black font-medium rounded-lg hover:bg-black hover:text-white transition-all duration-200">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Growth Plan -->
+                <div class="pricing-card bg-white p-8 rounded-2xl border-2 border-accent shadow-xl relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Growth</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold">$799</span>
+                            <span class="text-neutral-600">/month</span>
+                        </div>
+                        <p class="text-neutral-600">Complete AI SDR for growing teams</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            2,000 new prospects contacted monthly
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Voice calls + Email + LinkedIn + SMS
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Advanced lead qualification & scoring
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            15-25 hot leads delivered monthly
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Priority support
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Dedicated success manager
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Custom integrations included
+                        </li>
+                    </ul>
+                    <a href="signup.html" class="block w-full text-center px-6 py-3 bg-gradient-primary text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-white p-8 rounded-2xl border border-neutral-100">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Enterprise</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold">Custom</span>
+                        </div>
+                        <p class="text-neutral-600">Multiple AI SDRs for large teams</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Unlimited prospect outreach
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Custom voice training for your brand
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Advanced CRM integrations
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Multiple AI SDR personalities
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            White-label options available
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            Dedicated implementation team
+                        </li>
+                    </ul>
+                    <a href="signup.html" class="block w-full text-center px-6 py-3 border border-black text-black font-medium rounded-lg hover:bg-black hover:text-white transition-all duration-200">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Guarantee -->
+    <section class="py-24 bg-gradient-primary relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+            <h2 class="text-4xl font-bold mb-6">Performance Guarantee That Removes All Risk</h2>
+            <p class="text-xl mb-12 max-w-3xl mx-auto">We're so confident Harper AI will transform your sales process, we guarantee results.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-10 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl border border-white/10">
+                    <div class="text-6xl font-bold mb-4">10+</div>
+                    <div class="text-lg font-medium">Qualified Leads Monthly<br/>Guaranteed</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-10 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl border border-white/10">
+                    <div class="text-6xl font-bold mb-4">30</div>
+                    <div class="text-lg font-medium">Day Risk-Free<br/>Trial</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-10 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl border border-white/10">
+                    <div class="text-6xl font-bold mb-4">100%</div>
+                    <div class="text-lg font-medium">Money Back<br/>Guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Product</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="features.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Features</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Pricing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Integrations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">API</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Solutions</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="for-sdrs.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">For SDRs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="for-managers.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">For Managers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="enterprise.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Enterprise</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="small-business.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Small Business</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="about.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="careers.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Careers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Resources</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Documentation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Support</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Security</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Privacy Policy</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-neutral-100">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-neutral-600 text-sm">
+                        © 2024 Harper AI. All rights reserved.
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="privacy.html" class="text-sm text-neutral-600 hover:text-black transition-colors duration-300">Privacy Policy</a>
+                        <a href="terms.html" class="text-sm text-neutral-600 hover:text-black transition-colors duration-300">Terms of Service</a>
+                        <a href="security.html" class="text-sm text-neutral-600 hover:text-black transition-colors duration-300">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

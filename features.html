@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harper AI Features - Meet Your New AI SDR Team Member">
+    <title>Features - Harper AI</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/_brand/favicon-32x32.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#C084FC',
+                        accent: '#000000',
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.15);
+        }
+        .stat-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+        .gradient-text::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.5;
+            filter: blur(12px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-900">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md border-b border-neutral-100 z-50 transition-all duration-300 supports-backdrop-blur:bg-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-black tracking-tight">Harper AI</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="product.html" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200">Product</a>
+                    <a href="pricing.html" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200">Pricing</a>
+                    <div class="relative group">
+                        <button class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 flex items-center">
+                            Solutions
+                            <svg class="ml-2 h-5 w-5 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-1">
+                                <a href="solutions.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">By Industry</a>
+                                <a href="for-sdrs.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">For SDRs</a>
+                                <a href="for-managers.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">For Managers</a>
+                                <a href="enterprise.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">Enterprise</a>
+                                <a href="small-business.html" class="block px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-50">Small Business</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="resources.html" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200">Resources</a>
+                    <a href="security.html" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200">Security</a>
+                    <a href="signup.html" class="inline-flex items-center px-4 py-2 border-2 border-black text-black font-medium rounded-lg hover:bg-black hover:text-white transition-all duration-200">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold mb-4 block">AI-POWERED SALES DEVELOPMENT</span>
+                <h1 class="text-6xl font-bold text-black mb-6">Meet Your New AI SDR Team Member</h1>
+                <p class="text-xl text-neutral-600">Harper AI works 24/7 as your dedicated AI SDR, handling all cold outreach so your human SDRs can focus exclusively on closing qualified prospects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete AI SDR Capabilities -->
+    <section class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Voice AI Calling System -->
+                <div class="feature-card bg-white p-10 rounded-2xl border border-neutral-100 hover:border-primary/20 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.15)]">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mr-4 group-hover:from-primary/20 group-hover:to-secondary/20">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-black">Voice AI Calling System</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Makes 200+ personalized calls daily using natural voice AI
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Qualifies prospects with proven sales questions
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Handles common objections professionally
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Books meetings directly in your calendar
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Records all conversations for human SDR review
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-colors duration-200 font-medium group">
+                            Watch Live Demo
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Automated Email Campaigns -->
+                <div class="feature-card bg-white p-10 rounded-2xl border border-neutral-100 hover:border-primary/20 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.15)]">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mr-4 group-hover:from-primary/20 group-hover:to-secondary/20">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-black">Automated Email Campaigns</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Researches each prospect before sending emails
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Writes personalized messages based on company news and role
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Sends follow-up sequences automatically
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Recognizes buying signals in email responses
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Escalates hot prospects to human SDRs immediately
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-colors duration-200 font-medium group">
+                            View Email Template Library
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Automation -->
+                <div class="feature-card bg-white p-10 rounded-2xl border border-neutral-100 hover:border-primary/20 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.15)]">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mr-4 group-hover:from-primary/20 group-hover:to-secondary/20">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-black">LinkedIn Automation</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Sends connection requests with personalized messages
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Engages with prospect content authentically
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Messages prospects with relevant value propositions
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Monitors for positive engagement signals
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Maintains professional brand voice
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-colors duration-200 font-medium group">
+                            View LinkedIn Integration Guide
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lead Qualification & Handoff -->
+                <div class="feature-card bg-white p-10 rounded-2xl border border-neutral-100 hover:border-primary/20 hover:shadow-[0_20px_50px_-12px_rgba(139,92,246,0.15)]">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mr-4 group-hover:from-primary/20 group-hover:to-secondary/20">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-black">Lead Qualification & Handoff</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Scores prospects based on engagement and responses
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Identifies buying intent signals automatically
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Transfers hot leads with complete conversation history
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Provides recommended talking points for human SDRs
+                        </li>
+                        <li class="flex items-center text-neutral-600">
+                            <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                            Continues nurturing while human SDR takes over
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-colors duration-200 font-medium group">
+                            Customize Qualification Criteria
+                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-24 bg-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.15),transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center space-y-16">
+                <h2 class="text-6xl md:text-7xl font-extrabold tracking-tight gradient-text" data-text="Real Results for Sales Teams">Real Results for Sales Teams</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mt-20">
+                    <div class="stat-card bg-white/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20 shadow-[0_0_50px_rgba(139,92,246,0.1)]">
+                        <div class="text-7xl font-extrabold mb-4 gradient-text" data-text="200+">200+</div>
+                        <div class="text-2xl text-white font-semibold">Calls Made Daily<br/>Per AI SDR</div>
+                    </div>
+                    <div class="stat-card bg-white/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20 shadow-[0_0_50px_rgba(139,92,246,0.1)]">
+                        <div class="text-7xl font-extrabold mb-4 gradient-text" data-text="12+">12+</div>
+                        <div class="text-2xl text-white font-semibold">Qualified Leads<br/>Daily</div>
+                    </div>
+                    <div class="stat-card bg-white/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20 shadow-[0_0_50px_rgba(139,92,246,0.1)]">
+                        <div class="text-7xl font-extrabold mb-4 gradient-text" data-text="3x">3x</div>
+                        <div class="text-2xl text-white font-semibold">More Meetings<br/>Booked</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-gradient-primary relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
+            <h2 class="text-5xl font-bold mb-6">Ready to Transform Your Sales Process?</h2>
+            <p class="text-xl mb-12 max-w-3xl mx-auto">Stop burning out your sales team with endless cold calling. Let Harper AI handle the outreach while your human SDRs focus on what they do best—building relationships and closing deals.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="signup.html" class="group inline-flex items-center justify-center px-8 py-4 bg-black text-white font-medium rounded-xl hover:bg-neutral-900 transition-all duration-300">
+                    <span>Start Your Free Trial</span>
+                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <a href="demo.html" class="group inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-medium rounded-xl hover:bg-white hover:text-black transition-all duration-300">
+                    <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Watch Live Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Product</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="features.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Features</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Pricing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Integrations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">API</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Solutions</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="for-sdrs.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">For SDRs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="for-managers.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">For Managers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="enterprise.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Enterprise</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="small-business.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Small Business</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="about.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="careers.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Careers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-black mb-6">Resources</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Documentation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-neutral-600 hover:text-black transition-colors duration-300 flex items-center group">
+                                <span class="transform group-hover:translate-x-1 transition-transform duration-300">Support</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security.html" class="text-neutral-600 hover:text-black
