@@ -1,9 +1,9 @@
 services:
-  - type: web
+  - type: static
     name: harper-ai-website
-    env: static
     buildCommand: echo "Static site, no build needed"
-    staticPublishPath: ./user-workspace
+    publishDir: user-workspace
+    staticPublishPath: /
     headers:
       - path: /*
         name: Cache-Control
