@@ -1,7 +1,7 @@
 services:
   - type: static
-    name: harper-ai-website
-    buildCommand: echo "Static site, no build needed"
+    name: mohit-ai-website
+    buildCommand: echo "Static site, rebuilding $(date)"
     publishDir: user-workspace
     staticPublishPath: /
     headers:
