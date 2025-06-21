@@ -1,16 +1,11 @@
 {
-  "name": "harper-ai-website",
+  "name": "mohit-ai-website",
   "version": "1.0.0",
-  "description": "Harper AI Marketing Website",
+  "description": "Mohit AI Marketing Website",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.10.15",
-    "tailwindcss": "^3.3.3"
+    "dev": "python3 -m http.server 8000 --directory user-workspace",
+    "start": "python3 -m http.server $PORT --directory user-workspace",
+    "build": "echo 'Static site, no build needed'",
+    "preview": "python3 -m http.server 8000 --directory user-workspace"
   }
 }

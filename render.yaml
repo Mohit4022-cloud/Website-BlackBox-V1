@@ -1,19 +1,9 @@
 services:
-  - type: static
+  - type: web
     name: mohit-ai-phase5-website
+    env: python
     buildCommand: echo "Static site, no build needed"
-    publishDir: user-workspace
-    staticPublishPath: /
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=3600
-      - path: /*.css
-        name: Cache-Control
-        value: public, max-age=31536000
-      - path: /*.js
-        name: Cache-Control
-        value: public, max-age=31536000
+    startCommand: python3 -m http.server $PORT --directory user-workspace
     envVars:
-      - key: NODE_ENV
-        value: production
+      - key: PYTHON_VERSION
+        value: 3.9.0
