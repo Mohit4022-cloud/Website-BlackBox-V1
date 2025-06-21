@@ -1,14 +1,19 @@
 services:
   - type: static
-    name: harper-ai-website
+    name: mohit-ai-phase5-website
     buildCommand: echo "Static site, no build needed"
     publishDir: user-workspace
     staticPublishPath: /
     headers:
       - path: /*
         name: Cache-Control
-        value: no-cache
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+        value: public, max-age=3600
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=31536000
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=31536000
+    envVars:
+      - key: NODE_ENV
+        value: production
